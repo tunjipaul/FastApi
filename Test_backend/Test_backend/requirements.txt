@@ -1,0 +1,11 @@
+pandas
+fastapi
+uvicorn
+dotenv
+pydantic
+pymysql
+SQLALchemy
+pyJWT
+alembic
+fastapi-cors
+bcrypt
