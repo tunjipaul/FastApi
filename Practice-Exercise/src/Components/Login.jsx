@@ -14,15 +14,15 @@ function Login() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
+
       if (res.ok) {
         const data = await res.json();
         localStorage.setItem("token", data.token);
-        navigate("/dashboard");-+z1
+        navigate("/dashboard");
       } else {
         alert("Login failed");
       }
     } catch (err) {
-      console.error(err);
       alert("Server error");
     }
   };
@@ -38,18 +38,22 @@ function Login() {
           }}
         >
           <input
+            type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+
           <input
             type="password"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+
           <button type="submit">Login</button>
         </form>
+
         <p>
           Don't have an account? <Link to="/signup">Sign up</Link>
         </p>

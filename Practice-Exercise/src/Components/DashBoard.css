@@ -4,7 +4,7 @@
   padding: 30px;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -18,6 +18,7 @@
   gap: 10px;
   margin-bottom: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .expenseForm input {
@@ -40,6 +41,22 @@
   background-color: #0056b3;
 }
 
+.expenseForm .editBtn {
+  background-color: #28a745;
+}
+
+.expenseForm .editBtn:hover {
+  background-color: #1e7e34;
+}
+
+.expenseForm .cancelBtn {
+  background-color: #dc3545;
+}
+
+.expenseForm .cancelBtn:hover {
+  background-color: #a71d2a;
+}
+
 .expenseList {
   list-style: none;
   padding: 0;
@@ -48,19 +65,74 @@
 .expenseList li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 8px 0;
   border-bottom: 1px solid #eee;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.expenseList li button {
+.expenseList li span {
+  font-weight: 500;
+}
+
+.expenseActions {
+  display: flex;
+  gap: 6px;
+}
+
+.expenseActions button {
   padding: 4px 8px;
-  background-color: #dc3545;
   border: none;
   border-radius: 4px;
+  cursor: pointer;
   color: #fff;
+  transition: 0.2s;
+}
+
+.expenseActions .edit {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.expenseActions .edit:hover {
+  background-color: #e0a800;
+}
+
+.expenseActions .delete {
+  background-color: #dc3545;
+}
+
+.expenseActions .delete:hover {
+  background-color: #a71d2a;
+}
+
+.expenseList li div button {
+  margin-left: 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-.expenseList li button:hover {
+.expenseList li div button:first-child {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+.expenseList li div button:first-child:hover {
+  background-color: #e0a800;
+}
+
+.expenseList li div button:last-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.expenseList li div button:last-child:hover {
   background-color: #a71d2a;
+}
+
+.totalExpenses {
+  margin-top: 20px;
+  color: #08a3d3;
 }
